@@ -11,21 +11,21 @@ window.onload = function() {
   let adj = ["great", "big"];
   let noun = ["jogger", "racoon"];
 
-  var textHTML = "<ul>";
+  var textHTML = "<ol>";
 
-  for (let index = 0; index < pronoun.length; index++) {
-    for (let index = 0; index < adj.length; index++) {
-      for (let index = 0; index < noun.length; index++) {
-        const element1 = pronoun[index];
-        const element2 = adj[index];
-        const element3 = noun[index];
+  for (let i = 0; i < pronoun.length; i++) {
+    for (let j = 0; j < adj.length; j++) {
+      for (let q = 0; q < noun.length; q++) {
+        const element_i = pronoun[i];
+        const element_j = adj[j];
+        const element_q = noun[q];
 
-        let domainName = element1 + element2 + element3 + ".com";
+        let domainName = element_i + element_j + element_q + ".com";
         textHTML += "<li>" + domainName + "</li>";
       }
     }
   }
-  textHTML += "</ul>";
+  textHTML += "</ol>";
   document.write(textHTML);
   console.log("Hello Rigo from the console!");
 };
